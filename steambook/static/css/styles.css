@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #05a;
+    --footer-color: #00366b;
+}
+
+
+header {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--footer-color);
+}
+
+
+ul.navbar-nav {
+    padding-right: 120px;
+}
+
+.navbar-brand p {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 0;
+    padding-left: 160px;
+}
+
+a.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 34px;
+}
+
+a.nav-link:hover {
+    color: #d6d6d6;
+    text-decoration: none;
+}
