@@ -2,6 +2,8 @@
 
 {% block content %}
 <div class = "container py-5">
-Content here
-</div>
+{% for post in post_list %}
+<a>{{ post.text }}<a>
+{% endfor %}
 {% endblock %}
+</div>

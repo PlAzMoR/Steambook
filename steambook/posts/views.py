@@ -1,10 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .utils import get_page_context
+
+from .models import *
 
 
 def index(request):
     template = "posts/index.html"
-    return render(request, template)
+    post_list = Post.objects.all()
+    context = {
+        "post_list": get_page_context(request, post_list),
+    }
+    return render(request, template, context)
 
 def about(request):
-    return HttpResponse("<h2>О нас<h2>")
+    pass

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\tromi\Desktop\api_steambook\venv"
+VIRTUAL_ENV="C:\Users\tromi\Documents\Projects\api_steambook\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
