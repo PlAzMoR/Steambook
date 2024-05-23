@@ -3,7 +3,7 @@ from .models import *
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('text',)
+    list_display = ('title',)
 
     empty_value_display = '-отсутствует-'
 
