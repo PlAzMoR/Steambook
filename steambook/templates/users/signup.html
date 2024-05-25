@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+Sign up
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center" style="font-size: 24px;">Sign up</div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-group py-3">
+                            <input type="text" name="username" id="id_username" class="form-control" placeholder="Username">
+                            {% if form.username.errors %}
+                                <span class="text-danger">{{ form.username.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group py-3">
+                            <input type="password" name="password1" id="id_password1" class="form-control" placeholder="Password">
+                            {% if form.password1.errors %}
+                                <span class="text-danger">{{ form.password1.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group py-3">
+                            <input type="password" name="password2" id="id_password2" class="form-control" placeholder="Confirm Password">
+                            {% if form.password2.errors %}
+                                <span class="text-danger">{{ form.password2.errors }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group py-3">
+                            <input type="email" name="email" id="id_email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group py-3">
+                            <input type="phone" name="phone" id="id_phone" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+                            <a href="#" class="text-decoration-none">Забыли пароль?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

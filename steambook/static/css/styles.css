@@ -12,6 +12,9 @@ footer {
     background-color: var(--footer-color);
 }
 
+.custom-color {
+    background-color: var(--primary-color);
+}
 
 ul.navbar-nav {
     padding-right: 120px;
