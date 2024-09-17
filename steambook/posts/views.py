@@ -13,4 +13,5 @@ def index(request):
     return render(request, template, context)
 
 def about(request):
-    pass
+    template = "base.html"
+    return render(request, template)

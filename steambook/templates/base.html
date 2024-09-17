@@ -4,26 +4,26 @@
 <html lang = "ru">
     <head>
         <title> {% block title %}Steambook{% endblock %} </title>
-        <!--Настройка шаблона для браузеров-->
+        {% comment %} Настройка шаблона для браузеров {% endcomment %}
         <meta charset = "utf-8">
         <meta http-equiv = "X-UA-Compatible" content = "IE=Edge">
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
-        <!--Подключение фреймворка (Bootstrap)-->
+        {% comment %} Подключение фреймворка (Bootstrap) {% endcomment %}
         <link rel = "stylesheet" type = "text/css" href = "{% static "css/bootstrap.min.css"%}">
         <link rel = "stylesheet" type = "text/css" href = "{% static "css/styles.css" %}">
-        <link rel = "icon" href = "{% static "img/favicon.ico" %}" type = "image/x-icon">
+        <link rel = "icon" href = "{% static "img/fav/favicon.ico" %}" type = "image/x-icon">
     </head>
 
-    <body> 
-        <!--Подключение хедера-->
+    <body>
+        {% comment %} Подключение хедера {% endcomment %}
         {% include "includes/header.html" %}
         <main>
             <div class = "container py-5">
-                <!--Основной контент-->
+                {% comment %} Основной контент {% endcomment %}
                 {% block content %}{% endblock %}
             </div>
         </main>
-        <!--Подключение футера-->
+        {% comment %} Подключение футера {% endcomment %}
         {% include "includes/footer.html" %}
     </body>
 </html>
