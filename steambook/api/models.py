@@ -4,7 +4,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class Post(models.Model):
+class Airticket(models.Model):
     title = models.CharField(verbose_name = "Заголовок",
         max_length = 90)
     text = models.TextField(verbose_name = "Текст",
@@ -18,8 +18,8 @@ class Post(models.Model):
 
 
     class Meta:
-        verbose_name = "Предложение"
-        verbose_name_plural = "Предложения"
+        verbose_name = "Авиабилет"
+        verbose_name_plural = "Авиабилеты"
 
     def __str__(self):
         return self.title[:30]

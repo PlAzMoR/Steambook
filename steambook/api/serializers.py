@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import *
+from .models import User, Airticket
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -9,9 +9,9 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'username',)
 
 
-class PostSerializer(serializers.ModelSerializer):
+class AirticketSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Post
+        model = Airticket
         fields = ('title', 'text', 'author', 'price', 'pub_date', )
         read_only_fields = ('author',)

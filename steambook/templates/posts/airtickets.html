@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+    {% for ticket in ticket_list %}
+    <div class = "container py-3">
+    <li>{{ ticket.title }}</li>
+    <li>{{ ticket.text }}</li>
+    <li>{{ ticket.author }}</li>
+    <li>{{ ticket.price }}</li>
+    <li>{{ ticket.pub_date }}</li>
+    </div>
+    {% endfor %}
+    </ul>
+{% endblock %}

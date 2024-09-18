@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import *
-from .serializers import *
+from .models import User, Airticket
+from .serializers import UserSerializer, AirticketSerializer
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
@@ -8,6 +8,6 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = UserSerializer
 
 
-class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+class AirticketViewSet(viewsets.ModelViewSet):
+    queryset = Airticket.objects.all()
+    serializer_class = AirticketSerializer

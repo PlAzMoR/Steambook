@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import *
+from .models import Airticket
 
 
-class PostAdmin(admin.ModelAdmin):
+class AirticketAdmin(admin.ModelAdmin):
     list_display = ('title',)
 
     empty_value_display = '-отсутствует-'
 
 
-admin.site.register(Post, PostAdmin)
+admin.site.register(Airticket, AirticketAdmin)
